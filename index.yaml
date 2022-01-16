@@ -29,6 +29,16 @@ entries:
     urls:
     - https://github.com/aqaurius6666/helm-charts/releases/download/authservice-0.1.0/authservice-0.1.0.tgz
     version: 0.1.0
+  loadbalancer:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-01-16T22:26:08.814556212+07:00"
+    description: A Helm chart for Kubernetes
+    digest: b644c32df10948d1a5946b8da447c96031b8ed42daa1be4dc52e21e58dce07f7
+    name: loadbalancer
+    urls:
+    - https://github.com/aqaurius6666/helm-charts/releases/download/loadbalancer-0.1.0/loadbalancer-0.1.0.tgz
+    version: 0.1.0
   mailservice:
   - apiVersion: v2
     appVersion: 1.16.0
