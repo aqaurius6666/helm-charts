@@ -3,11 +3,50 @@ entries:
   apiservice:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-01-16T22:20:19.142100868+07:00"
+    description: A Helm chart for Kubernetes
+    digest: 28c2269229334b2ccc42f0e7061a82bdd1ad400ed1573d177219002b8029f5ab
+    name: apiservice
+    urls:
+    - https://github.com/aqaurius6666/helm-charts/releases/download/apiservice-0.2.0/apiservice-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-01-16T22:14:25.41172551+07:00"
     description: A Helm chart for Kubernetes
     digest: 26fc25920a673eec02317db32c126e6677cae7d317264a575949b67b6cff0411
     name: apiservice
     urls:
     - https://github.com/aqaurius6666/helm-charts/releases/download/apiservice-0.1.0/apiservice-0.1.0.tgz
+    version: 0.1.0
+  authservice:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-01-16T22:20:19.508074273+07:00"
+    description: A Helm chart for Kubernetes
+    digest: d747f97f54f951941f1b860725869cd2e27290bf0617f5fce68c38a161a95c8e
+    name: authservice
+    urls:
+    - https://github.com/aqaurius6666/helm-charts/releases/download/authservice-0.1.0/authservice-0.1.0.tgz
+    version: 0.1.0
+  mailservice:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-01-16T22:20:19.865165867+07:00"
+    description: A Helm chart for Kubernetes
+    digest: b68636489149b367370bded58ac3369e910b6b8f03268d73d6b550e8a66c1b2b
+    name: mailservice
+    urls:
+    - https://github.com/aqaurius6666/helm-charts/releases/download/mailservice-0.1.0/mailservice-0.1.0.tgz
+    version: 0.1.0
+  sish-client:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-01-16T22:20:20.215492385+07:00"
+    description: A Helm chart for Kubernetes
+    digest: 927c532a017a431c6f39f6ece19f3e64b8191d65211094f72f284d7db88e17dd
+    name: sish-client
+    urls:
+    - https://github.com/aqaurius6666/helm-charts/releases/download/sish-client-0.1.0/sish-client-0.1.0.tgz
     version: 0.1.0
 generated: "2022-01-16T22:14:24.716157657+07:00"
