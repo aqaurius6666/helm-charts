@@ -23,7 +23,7 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         command: ["ssh", "{{ .Values.services.sish.domain }}"]
-        args: ["-oStrictHostKeyChecking=no","-p {{ .Values.services.sish.port }}", "-R {{ .Values.services.sish.request.domain -}}{{ $spliter }}{{- .Values.services.sish.request.port | default 80 -}}:{{- .Values.services.sish.from.domain -}}:{{- .Values.services.sish.from.port | default 80 -}}"]
+        args: ["-oStrictHostKeyChecking=no","-p {{ .Values.services.sish.port }}", "-R {{ .Values.services.sish.request.domain -}}{{ $spliter }}{{- .Values.services.sish.request.port | default 80 -}}:{{- .Values.services.sish.from.domain -}}:{{- .Values.services.sish.from.port | default 80 -}}", "auto-close=true"]
 {{/*        livenessProbe:*/}}
 {{/*          httpGet:*/}}
 {{/*            host: {{ .Values.services.sish.request.domain -}}.{{ .Values.services.sish.domain }}*/}}

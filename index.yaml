@@ -52,6 +52,15 @@ entries:
   sish-client:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-04-18T03:23:23.317775073+07:00"
+    description: A Helm chart for Kubernetes
+    digest: 4fd86589f40d5756ad51f8b505fb2529795e8d7ac497afa3ab91baa9d10f3610
+    name: sish-client
+    urls:
+    - https://github.com/aqaurius6666/helm-charts/releases/download/sish-client-0.2.0/sish-client-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-01-16T22:19:45.529473413+07:00"
     description: A Helm chart for Kubernetes
     digest: 927c532a017a431c6f39f6ece19f3e64b8191d65211094f72f284d7db88e17dd
