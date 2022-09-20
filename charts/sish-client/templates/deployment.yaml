@@ -19,13 +19,13 @@ spec:
         app: "{{ .Values.service.name }}-selector"
     spec:
       containers:
-      - name: {{ .Values.service.name }}-dns-resolver
+      - name: "{{ .Values.service.name }}-dns-resolver"
         image: "janeczku/go-dnsmasq:release-1.0.7"
-          args:
-            - --listen
-            - "127.0.0.1:53"
-            - --default-resolver
-            - -search
+        args:
+          - --listen
+          - "127.0.0.1:53"
+          - --default-resolver
+          - -search
         resources:
           limits:
             cpu: 80m
