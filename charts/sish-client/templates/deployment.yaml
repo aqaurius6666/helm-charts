@@ -19,10 +19,25 @@ spec:
         app: "{{ .Values.service.name }}-selector"
     spec:
       containers:
+      - name: {{ .Values.service.name }}-dns-resolver
+        image: "janeczku/go-dnsmasq:release-1.0.7"
+          args:
+            - --listen
+            - "127.0.0.1:53"
+            - --default-resolver
+            - -search
+        resources:
+          limits:
+            cpu: 80m
+            memory: 64Mi
       - name: {{ .Values.service.name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         command: ["ssh", "{{ .Values.services.sish.domain }}"]
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128Mi
         args: ["-oStrictHostKeyChecking=no","-p {{ .Values.services.sish.port }}", "-R {{ .Values.services.sish.request.domain -}}{{ $spliter }}{{- .Values.services.sish.request.port | default 80 -}}:{{- .Values.services.sish.from.domain -}}:{{- .Values.services.sish.from.port | default 80 -}}", "auto-close=true"]
 {{/*        livenessProbe:*/}}
 {{/*          httpGet:*/}}
