@@ -1,0 +1,16 @@
+replicaCount: 1
+dns-resolver:
+  enabled: false
+service:
+  name: ssh-tunnel
+image:
+  repository: kroniak/ssh-client
+  tag: latest
+services:
+  sish:
+    request:
+      domain: 
+      port:
+    from:
+      domain:
+      port:
