@@ -1,5 +1,5 @@
 replicaCount: 1
-dns-resolver:
+dns_resolver:
   enabled: false
 service:
   name: ssh-tunnel
@@ -8,9 +8,11 @@ image:
   tag: latest
 services:
   sish:
+    domain: sish.example.com
+    port: 22222
     request:
-      domain: 
-      port:
+      domain: example
+      port: 80
     from:
-      domain:
-      port:
+      domain: exampleservice
+      port: 80

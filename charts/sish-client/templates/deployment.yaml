@@ -19,7 +19,7 @@ spec:
         app: "{{ .Values.service.name }}-selector"
     spec:
       containers:
-      {{- with .Values.dns-resolver.enabled -}}
+      {{- if .Values.dns_resolver.enabled }}
       - name: "{{ .Values.service.name }}-dns-resolver"
         image: "janeczku/go-dnsmasq:release-1.0.7"
         args:
@@ -31,7 +31,7 @@ spec:
           limits:
             cpu: 80m
             memory: 64Mi 
-      {{- end -}}
+      {{- end }}
       - name: {{ .Values.service.name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
